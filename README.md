@@ -16,14 +16,44 @@
 	- 상속 받는 대신 올바른 행동 객체로 구성됨으로써 행동을 부여받는것.    
 
 
-## Strategy Pattern(스트래티지 패턴)
+## Strategy Pattern(전략 패턴)
 
 알고리즘군을 정의하고 각각을 캡슐화하여 교환해서 사용할 수 있도록 만든다. 스트래티지를 활용하면 알고리즘을 사용하는 클라이언트와는 독립적으로 알고리즘을 변경할 수 있다.
 
 ![Strategy Pattern Image](http://www.dofactory.com/images/diagrams/net/strategy.gif)
 
+### 적용된 예제(in JDK)
+
+- java.util.Comparator#compare() called by Collections.sort()
+
+> 컬렉션 객체들에 대해서 sort를 할때는 객체의 어떤 값을 기준으로 객체간의 비교를 정할지를 정하는 알고리즘이 필요하다.
+그래서 아래처럼 미리 전략을 구성하고, 구성된 전략을 감싸주는 Comparator 인터페이스안에 로직을 넣어 감싸준뒤, 실제 대상 함수인 sort에 배열객체와 함께 알고리즘이 포함된 Comparator 객체를 넘겨주면, 실제 sort함수가 불릴때는 comparator 알고리즘에 따라 정렬을 수행한다.
+
+``` java 
+  Comparator<Child1> sort = new Comparator<Child1>() {
+   public int compare(Child1 o1, Child1 o2) {
+    return o2.getOrder().compareTo(o1.getOrder());
+   }
+  };
+  Collections.sort(list, sort); 
+```
+ 
+- javax.servlet,http.HttpServlet#service
+
+> 웹프로그래밍이야 말로 대표적인 전략패턴방식의 프로그래밍을 하는것이라 볼수 있다. 
+톰캣은 하나의 jvm인스턴스에서 돌아간다. 톰캣위에서는 여러개의 웹서비스가 동시에 동작하고 있다. 
+url request가 오면 port와 url context에  따라 거기에 맞는 각각의 웹서비스의 service()함수가 불리게 된다. 
+이때 service함수는 유저가 직접 작성한 것이 수행되게 된다. 여기서 service가 전략이 된다.
+톰캣입장에서 볼때는 전략 패턴의 방식으로 url을 처리하는 것이다.
+
+
+- javax.servlet.Filter#doFilter
+
+> url에 대해 유저가 처리하는 함수 service()를 부르기전, 유저가 주입한 filter에 따라서 url이 처리될수도 있고, 거절될수도 있고, 특정 page로 direct 될수도 있다. 이것또한 tomcat입장에서 볼때 전략패턴의 방식으로 url을 필터링하는 것이다.
+
+
 
 참고 
 - Headfirst DesignPattern 책
 - http://hyeonstorage.tistory.com/146# DesignPatterStudy
-디자인 패턴 스터디 후 실습
+- http://m.blog.naver.com/2feelus/220658663151

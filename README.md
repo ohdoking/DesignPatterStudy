@@ -2,7 +2,7 @@
 디자인 패턴 스터디 후 실습
 
 
-## 객체 지향의 원칙
+## 디자인의 원칙
 1. 애플리케이션에서 달라지는 부분을 찾아내고, 달라지지 않는 부분으로 부터 분리시킨다.
 	- 바뀌는 부분은 캡슐화한다.	
 2. 구현이 아닌 인터페이스에 맞춰서 프로그래밍한다.
@@ -14,7 +14,7 @@
 	그렇게하면 변수르 선언하는 클래스에서 실제 객체의 형식을 몰라도 된다.
 4. 상속보다는 구성(Composition)을 활용한다.
 	- 상속 받는 대신 올바른 행동 객체로 구성됨으로써 행동을 부여받는것.    
-
+5. 서로 상호작용을 하는 객체 사이에서는 가능하면 느슨하게 결합하는 디자인을 사용해야한다.
 
 ## Strategy Pattern(전략 패턴)
 
@@ -49,8 +49,31 @@ url request가 오면 port와 url context에  따라 거기에 맞는 각각의 
 
 - javax.servlet.Filter#doFilter
 
-> url에 대해 유저가 처리하는 함수 service()를 부르기전, 유저가 주입한 filter에 따라서 url이 처리될수도 있고, 거절될수도 있고, 특정 page로 direct 될수도 있다. 이것또한 tomcat입장에서 볼때 전략패턴의 방식으로 url을 필터링하는 것이다.
+> url에 대해 유저가 처리하는 함수 service()를 부르기전, 유저가 주입한 filter에 따라서 url이 처리될수도 있고, 거절될수도 있고, 특정 cnfpage로 direct 될수도 있다. 이것또한 tomcat입장에서 볼때 전략패턴의 방식으로 url을 필터링하는 것이다.
 
+
+## Observer Pattern(옵저버 패턴)
+
+한 객체의 상태가 바뀌면 그 객체 의존하는 다른 객체들한테 연락이 가고 자동으로 내용이 갱신되는 방식으로 일대다(one-to-many) 의존성을 정의한다.
+
+![Observer Pattern Image](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Observer.svg/500px-Observer.svg.png)
+
+Subject(출판사) + Observer(구독자) 
+
+![Observer Pattern Image](http://cfile28.uf.tistory.com/image/017FA340512434BB31EC10)
+
+옵저버 패턴은 Subject와 Observer 가 Loose coupling(느슨한 결합)으로 되어 있다.
+
+- Subject가 Observer에 대해 아는 것은 Observer가 특정 인터페이스를 구현한다는것 뿐
+- Observer는 언제든지 새로 추가 가능
+- 새로운 형식의 Observer를 추가하려고 할 때도 Subject를 전혀 변경할 필요가 없음.
+- Subject 와 Observer는 서로 독립적으로 재사용 할 수 있음.
+- Subject나 Observer가 바뀌더라도 서로한테 영향을 미치지 않음.
+
+
+
+
+### 적용된 예제
 
 
 참고 

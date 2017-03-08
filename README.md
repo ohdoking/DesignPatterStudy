@@ -1,5 +1,5 @@
 # DesignPatterStudy
-디자인 패턴 스터디 후 실습
+디자인 패턴 스터디 후 실습을 목적으로 만든 프로젝트이다.
 
 
 ## 객체 지향의 원칙
@@ -53,7 +53,7 @@ url request가 오면 port와 url context에  따라 거기에 맞는 각각의 
 
 
 
-참고 
-- Headfirst DesignPattern 책
+### 참고 
+- HeadFirst DesignPattern book
 - http://hyeonstorage.tistory.com/146# DesignPatterStudy
 - http://m.blog.naver.com/2feelus/220658663151

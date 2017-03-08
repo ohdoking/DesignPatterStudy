@@ -1,4 +1,4 @@
-package com.ohdoking.designpattern.day2;
+package com.ohdoking.designpattern.day2.observer;
 
 import java.util.ArrayList;
 
@@ -20,7 +20,7 @@ public class WeatherData implements Subject{
 		measurementsChanged();
 	}
 
-//	ì˜µì €ë²„ ë“¤ì—ê²Œ ê°±ì‹ ëœ ê²°ê³¼ë¥¼ ì•Œ
+//	?˜µ??ë²? ?“¤?—ê²? ê°±ì‹ ?œ ê²°ê³¼ë¥? ?•Œ
 	public void measurementsChanged(){
 		notifyObservers();
 	}
@@ -38,7 +38,7 @@ public class WeatherData implements Subject{
 		}
 	}
 
-	//ì˜µì €ë²„ê°€ ê°€ì§€ê³  ìˆëŠ” update ë©”ì„œë“œë¥¼ ì‹¤í–‰í•˜ì—¬ ì˜µì €ë²„ë“¤ì—ê²Œ ìƒíƒœê°€ ë³€í–ˆë‹¤ê³  ì•Œë ¤ì¤Œ.
+	//?˜µ??ë²„ê? ê°?ì§?ê³? ?ˆ?Š” update ë©”ì„œ?“œë¥? ?‹¤?–‰?•˜?—¬ ?˜µ??ë²„ë“¤?—ê²? ?ƒ?ƒœê°? ë³??–ˆ?‹¤ê³? ?•Œ? ¤ì¤?.
 	@Override
 	public void notifyObservers() {
 		for(int i = 0 ; i < observers.size() ; i++){

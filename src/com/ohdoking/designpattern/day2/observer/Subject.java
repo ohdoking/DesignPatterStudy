@@ -1,4 +1,4 @@
-package com.ohdoking.designpattern.day2;
+package com.ohdoking.designpattern.day2.observer;
 
 public interface Subject {
 

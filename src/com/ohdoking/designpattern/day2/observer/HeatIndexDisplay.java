@@ -1,4 +1,4 @@
-package com.ohdoking.designpattern.day2;
+package com.ohdoking.designpattern.day2.observer;
 public class HeatIndexDisplay implements Observer, DisplayElement {
 	float heatIndex = 0.0f;
 	private WeatherData weatherData;

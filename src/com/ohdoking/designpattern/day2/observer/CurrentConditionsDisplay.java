@@ -1,4 +1,4 @@
-package com.ohdoking.designpattern.day2;
+package com.ohdoking.designpattern.day2.observer;
 
 public class CurrentConditionsDisplay implements Observer, DisplayElement{
 
@@ -13,7 +13,7 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement{
 
 	@Override
 	public void display() {
-		System.out.println("í˜„ì¬ ìƒíƒœ : "+ temperature + "ë„ ê·¸ë¦¬ê³ " + humidity + "% ìŠµ");
+		System.out.println("?˜„?¬ ?ƒ?ƒœ : "+ temperature + "?„ ê·¸ë¦¬ê³?" + humidity + "% ?Šµ");
 	}
 
 	@Override

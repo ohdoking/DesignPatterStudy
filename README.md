@@ -71,7 +71,10 @@ Subject(출판사) + Observer(구독자)
 - Subject나 Observer가 바뀌더라도 서로한테 영향을 미치지 않음.
 
 
+java 에는 내장 옵저버 패턴가 있음.
+내장 옵저버는 푸시방식과 풀방식 두가지를 지원한다.
 
+![Observer Pattern Image In Java](https://i.stack.imgur.com/l1d3J.png)
 
 ### 적용된 예제
 

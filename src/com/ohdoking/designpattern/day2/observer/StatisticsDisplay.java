@@ -1,4 +1,4 @@
-package com.ohdoking.designpattern.day2;
+package com.ohdoking.designpattern.day2.observer;
 public class StatisticsDisplay implements Observer, DisplayElement {
 	private float maxTemp = 0.0f;
 	private float minTemp = 200;

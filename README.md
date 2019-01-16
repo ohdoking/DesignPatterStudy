@@ -79,6 +79,45 @@ java 에는 내장 옵저버 패턴가 있음.
 ### 적용된 예제
 
 
+
+## Proxy Pattern
+
+### How to make RMI
+
+Phase 1 : To make Remote Interface.
+
+	1. To extend java.rmi.Remote.
+	2. To declare every method that throws RemoteException.
+	3. Return value and argument have to declare Primitive or Serializable type.
+		- Argument of remote method should convey through all network and they package through serializing.
+		
+Phase 2 : To make Service Implement Class.
+
+	1. To implement Remote interface.
+	2. To extend UnicastRemoteObject.
+	3. To make Constructor that doesn't have argument that declares RemoteException.
+	4. To register the service in RMI registry.
+	
+Phase 3 : To create Stub and Skeleton.
+
+	1.  To run RMIC regarding class that implements service.
+
+Phase 4 : To execute RMIregistry.
+
+	1. To execute RMIregistry with new terminal.
+	
+Phase 5 : To operate service
+
+	1. To open other terminal and start service.
+
+### How it works
+
+	1. To look up RMI registry in client.
+	2. To return stub object in RMI registry.
+	3. To call method regarding stub in client.
+	
+
+	
 ### 참고 
 - HeadFirst DesignPattern book
 - http://hyeonstorage.tistory.com/146# DesignPatterStudy

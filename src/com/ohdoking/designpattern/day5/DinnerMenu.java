@@ -1,5 +1,8 @@
 package com.ohdoking.designpattern.day5;
 
+import com.ohdoking.designpattern.day5.iterator.DinnerMenuIterator;
+import com.ohdoking.designpattern.day5.iterator.Iterator;
+
 public class DinnerMenu {
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
@@ -27,6 +30,10 @@ public class DinnerMenu {
 
     public MenuItem[] getMenuItems() {
         return menuItems;
+    }
+
+    public Iterator createIterator() {
+        return new DinnerMenuIterator(menuItems);
     }
 
     //method related in etc menu.

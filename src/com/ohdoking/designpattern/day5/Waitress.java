@@ -9,26 +9,31 @@ import java.util.Iterator;
  * if you use iterator pattern,
  * you can access all list in the aggregate without exposing inner implementation method.
  *
- * 
+ *
  *
  */
 public class Waitress {
     Menu pancakeHouseMenu;
     Menu dinnerMenu;
+    Menu cafeMenu;
 
-    public Waitress(Menu pancakeHouseMenu, Menu dinnerMenu) {
+    public Waitress(Menu pancakeHouseMenu, Menu dinnerMenu, Menu cafeMenu) {
         this.pancakeHouseMenu = pancakeHouseMenu;
         this.dinnerMenu = dinnerMenu;
+        this.cafeMenu = cafeMenu;
     }
 
     public void printMenu(){
         Iterator pancakeIterator = pancakeHouseMenu.createIterator();
         Iterator dinnerIterator = dinnerMenu.createIterator();
+        Iterator cafeIterator = cafeMenu.createIterator();
         System.out.println("---------- Menu -----------");
         System.out.println("------ Morning Menu -------");
         printMenu(pancakeIterator);
         System.out.println("------- Lunch Menu --------");
         printMenu(dinnerIterator);
+        System.out.println("------- Cafe Menu --------");
+        printMenu(cafeIterator);
     }
 
     public void printMenu(Iterator iterator){
@@ -44,8 +49,9 @@ public class Waitress {
 
         PancakeHouseMenu phm = new PancakeHouseMenu();
         DinnerMenu dm = new DinnerMenu();
+        CafeMenu cm = new CafeMenu();
 
-        Waitress w = new Waitress(phm, dm);
+        Waitress w = new Waitress(phm, dm, cm);
         w.printMenu();
     }
 }

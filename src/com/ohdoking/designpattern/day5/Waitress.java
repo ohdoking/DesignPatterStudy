@@ -1,12 +1,22 @@
 package com.ohdoking.designpattern.day5;
 
-import com.ohdoking.designpattern.day5.iterator.Iterator;
+import com.ohdoking.designpattern.day5.iterator.Menu;
+import java.util.Iterator;
 
+/**
+ * simulate iterator pattern.
+ *
+ * if you use iterator pattern,
+ * you can access all list in the aggregate without exposing inner implementation method.
+ *
+ * 
+ *
+ */
 public class Waitress {
-    PancakeHouseMenu pancakeHouseMenu;
-    DinnerMenu dinnerMenu;
+    Menu pancakeHouseMenu;
+    Menu dinnerMenu;
 
-    public Waitress(PancakeHouseMenu pancakeHouseMenu, DinnerMenu dinnerMenu) {
+    public Waitress(Menu pancakeHouseMenu, Menu dinnerMenu) {
         this.pancakeHouseMenu = pancakeHouseMenu;
         this.dinnerMenu = dinnerMenu;
     }

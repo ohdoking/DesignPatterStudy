@@ -1,12 +1,11 @@
 package com.ohdoking.designpattern.day5;
 
-import com.ohdoking.designpattern.day5.iterator.Iterator;
-import com.ohdoking.designpattern.day5.iterator.PancakeMenuIterator;
+import com.ohdoking.designpattern.day5.iterator.Menu;
 
-import java.awt.*;
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class PancakeHouseMenu {
+public class PancakeHouseMenu implements Menu {
     ArrayList menuItems;
 
     public PancakeHouseMenu() {
@@ -29,7 +28,7 @@ public class PancakeHouseMenu {
     }
 
     public Iterator createIterator() {
-        return new PancakeMenuIterator(menuItems);
+        return menuItems.iterator();
     }
 
     //.. and lots of code that related in arrayList.

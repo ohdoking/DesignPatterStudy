@@ -1,6 +1,7 @@
 package com.ohdoking.designpattern.day5.iterator;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class PancakeMenuIterator implements Iterator{
 
@@ -25,5 +26,11 @@ public class PancakeMenuIterator implements Iterator{
     public Object next() {
         return menuList.get(position++);
     }
+
+    @Override
+    public void remove() {
+        menuList.remove(0);
+    }
+
 
 }

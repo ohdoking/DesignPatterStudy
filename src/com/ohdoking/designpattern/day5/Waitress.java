@@ -10,6 +10,11 @@ import java.util.Iterator;
  * you can access all list in the aggregate without exposing inner implementation method.
  *
  *
+ * simulate composite pattern
+ *
+ * if you use composite pattern, you can build object as tree type that has node composite and individual object
+ * (The Composite pattern allows you to build objects in a tree-like configuration with objects and individual objects as nodes.)
+ *
  *
  */
 public class Waitress {

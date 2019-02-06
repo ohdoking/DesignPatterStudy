@@ -1,5 +1,7 @@
 package com.ohdoking.designpattern.day5.Composite;
 
+import java.util.Iterator;
+
 public class MenuItem extends MenuComponent{
 
     String name;
@@ -42,5 +44,9 @@ public class MenuItem extends MenuComponent{
         }
         System.out.println(", " + getPrice());
         System.out.println(" ---" + getDescription());
+    }
+
+    public Iterator createIterator(){
+        return new NullIterator();
     }
 }

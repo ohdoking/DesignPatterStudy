@@ -124,9 +124,33 @@ in some cases, algorithms are necessarily container-specific and thus cannot be 
 
 ![Iterator Pattern Image](https://upload.wikimedia.org/wikipedia/commons/c/c5/W3sDesign_Iterator_Design_Pattern_UML.jpg)
 
+## Composite Pattern
+the composite pattern is a partitioning design pattern.
+The composite pattern describes a group of objects that is treated the same way as a single instance of the same type of object.
+The intent of a composite is to "compose" objects into tree structures to represent part-whole hierarchies.
+Implementing the composite pattern lets clients treat individual objects and compositions uniformly.
+
+컴포지트 패턴(Composite Pattern)은 간단하게 말해 단일 객체(Single Instance)든 객체들의 집합(Group of Instance)이든 같은 방법으로 취급하는 것입니다.
+다시 말해, 개별적인 객체들과 객체들의 집합간의 처리 방법의 차이가 없을 경우 사용하면 됩니다.
+여기서 컴포지트(Composite)의 의미는 일부 또는 그룹을 표현하는 객체들을 트리 구조(Tree Structures)로 구성한다는 겁니다.
+
+### Explain each class role
+
+#### Component
+    - it is abstract interface to representative all elements
+
+#### Leaf
+    - Leaf element is single element by being implemented Component interface.
+
+#### Composite
+    - Composite element is element that has children element by being implemented Component interface.
+
+![Composite Pattern Image](https://upload.wikimedia.org/wikipedia/commons/6/65/W3sDesign_Composite_Design_Pattern_UML.jpg)
+
 
 	
 ### 참고 
 - HeadFirst DesignPattern book
 - http://hyeonstorage.tistory.com/146# DesignPatterStudy
 - http://m.blog.naver.com/2feelus/220658663151
+- https://jdm.kr/blog/228

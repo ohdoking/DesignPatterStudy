@@ -116,6 +116,14 @@ Phase 5 : To operate service
 	2. To return stub object in RMI registry.
 	3. To call method regarding stub in client.
 	
+## Iterator Pattern
+
+The iterator pattern is a design pattern in which an iterator is used to traverse a container and access the container's elements.
+The iterator pattern decouples algorithms from containers;
+in some cases, algorithms are necessarily container-specific and thus cannot be decoupled.
+
+![Iterator Pattern Image](https://upload.wikimedia.org/wikipedia/commons/c/c5/W3sDesign_Iterator_Design_Pattern_UML.jpg)
+
 
 	
 ### 참고 

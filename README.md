@@ -183,8 +183,14 @@ Implementing the composite pattern lets clients treat individual objects and com
 '''
 ![Composite Pattern Image](https://upload.wikimedia.org/wikipedia/commons/6/65/W3sDesign_Composite_Design_Pattern_UML.jpg)
 
+## State Pattern
 
-	
+The state pattern is a behavioral software design pattern that allows an object to alter its behavior when its internal state changes.
+This pattern is close to the concept of finite-state machines.
+The state pattern can be interpreted as a strategy pattern, which is able to switch a strategy through invocations of methods defined in the pattern's interface.
+
+![State Pattern Image](https://en.wikipedia.org/wiki/State_pattern#/media/File:W3sDesign_State_Design_Pattern_UML.jpg)
+
 ### 참고 
 - HeadFirst DesignPattern book
 - http://hyeonstorage.tistory.com/146# DesignPatterStudy

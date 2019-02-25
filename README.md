@@ -145,6 +145,42 @@ Implementing the composite pattern lets clients treat individual objects and com
 #### Composite
     - Composite element is element that has children element by being implemented Component interface.
 
+### Sample code
+''' java
+    /**
+    Node class assume that based on file and directory.
+    every file and directory has their own name.
+    so they have getName() method.
+    */
+    interface Node {
+        public String getName();
+    }
+
+    /**
+    The File class ends when it implements the Node interface.
+    Because they don't need to child.
+    */
+    class File implements Node {
+        private String name;
+        // ...
+        @Override
+        public String getName(){ return name; }
+    }
+
+    /**
+    Directory class need to a List that can put their child element besides being implement Node interface.
+    */
+    class Directory implements Node {
+        private String name;
+        private List<Node> children;
+        // ...
+        @Override
+        public String getName(){ return name; }
+        public void add(Node node) {
+            children.add(node);
+        }
+    }
+'''
 ![Composite Pattern Image](https://upload.wikimedia.org/wikipedia/commons/6/65/W3sDesign_Composite_Design_Pattern_UML.jpg)
 
 

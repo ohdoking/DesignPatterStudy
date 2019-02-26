@@ -204,3 +204,4 @@ The decorator pattern is structurally nearly identical to the chain of responsib
 - http://hyeonstorage.tistory.com/146# DesignPatterStudy
 - http://m.blog.naver.com/2feelus/220658663151
 - https://jdm.kr/blog/228
+- https://gmlwjd9405.github.io/2018/07/09/decorator-pattern.html

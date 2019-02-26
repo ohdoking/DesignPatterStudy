@@ -8,5 +8,9 @@ public class Client {
       roadWithLane.display();
       Display roadWithTraffic = new TrafficDecorator(new RoadDisplay());
       roadWithTraffic.display();
+
+      Display roadWithLaneAndTraffic =
+              new TrafficDecorator(new LaneDecorator(new RoadDisplay()));
+      roadWithLaneAndTraffic.display();
   }
 }

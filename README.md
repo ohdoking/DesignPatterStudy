@@ -191,6 +191,14 @@ The state pattern can be interpreted as a strategy pattern, which is able to swi
 
 ![State Pattern Image](https://en.wikipedia.org/wiki/State_pattern#/media/File:W3sDesign_State_Design_Pattern_UML.jpg)
 
+## Decorator Pattern
+
+In object-oriented programming, the decorator pattern is a design pattern that allows behavior to be added to an individual object, dynamically, without affecting the behavior of other objects from the same class.
+The decorator pattern is often useful for adhering to the Single Responsibility Principle, as it allows functionality to be divided between classes with unique areas of concern.
+The decorator pattern is structurally nearly identical to the chain of responsibility pattern, the difference being that in a chain of responsibility, exactly one of the classes handles the request, while for the decorator, all classes handle the request.
+
+![Decorator Pattern Image](https://en.wikipedia.org/wiki/File:W3sDesign_Decorator_Design_Pattern_UML.jpg)
+
 ### 참고 
 - HeadFirst DesignPattern book
 - http://hyeonstorage.tistory.com/146# DesignPatterStudy
